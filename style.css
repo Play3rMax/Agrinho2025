@@ -1,0 +1,111 @@
+/* Variáveis de cores */
+:root {
+  --verde-campo: #5b8c5a;
+  --cinza-cidade: #4a4a4a;
+  --amarelo: #f2c94c;
+  --branco: #ffffff;
+}
+
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--cinza-cidade);
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+.site-header {
+  background: var(--verde-campo);
+  color: var(--branco);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.site-header nav li + li {
+  margin-left: 1rem;
+}
+
+.site-header a {
+  color: var(--branco);
+  text-decoration: none;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  text-align: center;
+  color: var(--branco);
+}
+
+.hero img {
+  width: 100%;
+  display: block;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1rem 2rem;
+}
+
+/* Conteúdo principal */
+main {
+  padding: 2rem;
+}
+
+.sobre,
+.atividades,
+.galeria {
+  margin-bottom: 2rem;
+}
+
+.atividades ul {
+  list-style: disc inside;
+}
+
+.galeria .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+/* Rodapé */
+.site-footer {
+  background: var(--cinza-cidade);
+  color: var(--branco);
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .site-header {
+    flex-direction: column;
+  }
+
+  .site-header nav ul {
+    flex-direction: column;
+    margin-top: 0.5rem;
+  }
+
+  .site-header nav li + li {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}
